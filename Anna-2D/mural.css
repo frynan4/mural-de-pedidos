@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    background: #FFC0CB;
     margin: 0;
     padding: 0;
 }
@@ -62,3 +62,4 @@ h1 {
 .acoes button:hover {
     opacity: 0.9;
 }
+
