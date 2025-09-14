@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03/09/2025 às 20:54
+-- Tempo de geração: 14/09/2025 às 16:57
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -24,24 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tab`
+-- Estrutura para tabela `produtos`
 --
 
-CREATE TABLE `tab` (
+CREATE TABLE `produtos` (
   `id` int(10) NOT NULL,
-  `nome` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
-  `mensagem` text CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL
+  `nome` varchar(100) NOT NULL,
+  `descricao` text DEFAULT NULL,
+  `preco` decimal(10,2) DEFAULT NULL,
+  `imagem_url` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `produtos`
+--
+
+INSERT INTO `produtos` (`id`, `nome`, `descricao`, `preco`, `imagem_url`) VALUES
+(6, 'celura', 'muinto bom veiiii', 0.50, 'https://res.cloudinary.com/djsrgj8oj/image/upload/v1757861233/sea7nt8097hbidrankdw.png'),
+(7, 'shampoo', 'para cabelos lisos e cedosos', 20.00, 'https://res.cloudinary.com/djsrgj8oj/image/upload/v1757861712/lxmk8h2pkssbj3zwnqwj.png');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices de tabela `tab`
+-- Índices de tabela `produtos`
 --
-ALTER TABLE `tab`
+ALTER TABLE `produtos`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -49,10 +58,10 @@ ALTER TABLE `tab`
 --
 
 --
--- AUTO_INCREMENT de tabela `tab`
+-- AUTO_INCREMENT de tabela `produtos`
 --
-ALTER TABLE `tab`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `produtos`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
