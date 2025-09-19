@@ -97,7 +97,7 @@ $produtos = mysqli_query($conexao, "SELECT * FROM produtos ORDER BY id DESC");
                     <p><strong>Nome:</strong> <?= htmlspecialchars($res['nome']) ?></p>
                     <p><strong>Preço:</strong> R$ <?= number_format($res['preco'], 2, ',', '.') ?></p>
                     <p><strong>Descrição:</strong> <?= nl2br(htmlspecialchars($res['descricao'])) ?></p>
-                    <p><img src="<?= htmlspecialchars($res['imagem_url']) ?>" alt="<?= htmlspecialchars($res['nome']) ?>"></p>
+                    <p><img src="<?= htmlspecialchars($res['imagem_url']) ?>" alt="<?= htmlspecialchars($res['nome']) ?>" class="imagem-padronizada"></p>
 
                     <!-- Link para excluir -->
                     <a href="moderar.php?excluir=<?= $res['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>

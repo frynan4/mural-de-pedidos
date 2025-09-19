@@ -111,7 +111,7 @@ if (isset($_POST['cadastra'])) {
             echo '<p><strong>Nome:</strong> ' . htmlspecialchars($res['nome']) . '</p>';
             echo '<p><strong>Preço:</strong> R$ ' . number_format($res['preco'], 2, ',', '.') . '</p>';
             echo '<p><strong>Descrição:</strong> ' . nl2br(htmlspecialchars($res['descricao'])) . '</p>';
-            echo '<img src="' . htmlspecialchars($res['imagem_url']) . '" alt="' . htmlspecialchars($res['nome']) . '">';
+            echo '<img src="' . htmlspecialchars($res['imagem_url']) . '" alt="' . htmlspecialchars($res['nome']) . '" class="imagem-padronizada">';
             echo '</div>';
         }
         ?>

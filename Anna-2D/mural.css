@@ -12,6 +12,13 @@ body {
     margin: 0;           
     padding: 50px 20px;  
     color: #000000;
+    
+}
+
+.imagem-padronizada {
+    width: 50%;
+    height: 50%;
+
 }
 
 #main {
